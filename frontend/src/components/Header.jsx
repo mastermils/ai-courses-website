@@ -64,8 +64,11 @@ function Header() {
             <a href="/" style={{ marginRight: '1rem', color: '#fff' }}>
               Home
             </a>
-            <a href="/courses" style={{ color: '#fff' }}>
+            <a href="/courses" style={{ marginRight: '1rem', color: '#fff' }}>
               Courses Admin
+            </a>
+            <a href="/enrolled" style={{ color: '#fff' }}>
+              Enrolled Courses
             </a>
           </>
         ) : (

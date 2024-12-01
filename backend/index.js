@@ -122,6 +122,21 @@ app.get('/api/courses', async (req, res) => {
   }
 });
 
+// Enrollments Route
+app.get('/api/enrollments', (req, res) => {
+  if (!req.isAuthenticated()) {
+    return res.status(401).json({ message: 'Unauthorized' });
+  }
+
+  // Replace with your actual logic for fetching enrollments
+  const userEnrollments = [
+    { id: 'course1', title: 'Introduction to AI', description: 'Basics of AI', price: 100 },
+    { id: 'course2', title: 'Advanced AI', description: 'Deep learning and more', price: 200 },
+  ];
+
+  res.json(userEnrollments);
+});
+
 // Protected route example
 app.get('/api/protected', (req, res) => {
   console.log('Authenticated request:', req.isAuthenticated());
